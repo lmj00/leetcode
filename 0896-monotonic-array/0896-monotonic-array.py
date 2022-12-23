@@ -1,11 +1,7 @@
 class Solution:
     def isMonotonic(self, nums: List[int]) -> bool:
         
-        asc = nums.copy()
-        desc = nums.copy()
+        nums2 = nums.copy()
+        nums2.sort()
         
-        asc.sort()
-        desc.sort(reverse=True)
-        
-        
-        return nums == asc or nums == desc
+        return nums == nums2 or nums == list(reversed(nums2))
