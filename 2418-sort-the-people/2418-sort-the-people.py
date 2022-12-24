@@ -1,11 +1,10 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
 
+        ls = [(names[i], heights[i]) for i in range(len(names))]
+         
+        val = sorted(ls, key=lambda x:x[1], reverse=True)
         
-        for i in range(len(names)):
-            for j in range(len(heights)):
-                if heights[i] > heights[j]:
-                    names[i], names[j] = names[j], names[i]
-                    heights[i], heights[j] = heights[j], heights[i]
-                    
-        return names       
+        result = [i[0] for i in val]
+        
+        return result
