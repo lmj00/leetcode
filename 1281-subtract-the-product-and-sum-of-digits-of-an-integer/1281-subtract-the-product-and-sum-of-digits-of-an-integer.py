@@ -6,6 +6,9 @@ class Solution:
         n = list(map(int, str(n)))
 
         s = sum(n)
-        m = reduce(lambda x, y: x * y, n)
+        m = 1
+        
+        for i in n:
+            m *= i    
         
         return m - s    
