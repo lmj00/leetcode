@@ -7,6 +7,6 @@ class Solution:
             if i == '*':
                 del ss[-1]
             else:
-                ss += i
+                ss.append(i)
 
         return ''.join(ss)
